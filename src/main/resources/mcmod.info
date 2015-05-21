@@ -1,0 +1,21 @@
+[
+{
+  "modid": "tubersvaults",
+  "name": "Tubers' Vaults",
+  "description": "Provides more world generated loot through vaults.",
+  "version": "1.7.10-0.0.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authors": [
+    "Tubers"
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
