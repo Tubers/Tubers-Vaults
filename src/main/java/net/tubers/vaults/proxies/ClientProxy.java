@@ -7,7 +7,8 @@ import cpw.mods.fml.client.registry.ClientRegistry;
 public class ClientProxy extends CommonProxy {
 	
 	public void registerProxies(){
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityIronVault.class, new TileEntityIronVaultRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityIronVault.class,
+				new TileEntityIronVaultRenderer());
 	}
 
 }
