@@ -1,21 +1,20 @@
-package net.tubers.vaults.blocks;
+package net.tubers.vaults.blocks.vault.iron;
 
 import java.util.Iterator;
 import java.util.List;
 
-import net.minecraft.block.BlockChest;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.ContainerChest;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraftforge.common.util.ForgeDirection;
+import net.tubers.vaults.blocks.TileEntityTV;
+import net.tubers.vaults.blocks.vault.iron.BlockIronVault;
+import net.tubers.vaults.blocks.vault.iron.ContainerVault;
 
-public class TileEntityIronVault extends TileEntity implements IInventory {
+public class TileEntityIronVault extends TileEntityTV implements IInventory {
 	public float prevLidAngle;
 	public float lidAngle;
 	public float prevWheelAngle;
@@ -196,7 +195,6 @@ public class TileEntityIronVault extends TileEntity implements IInventory {
 	@Override
 	public void openInventory() 
 	{
-		System.out.println("test");
 		if (this.numPlayersUsing < 0)
         {
             this.numPlayersUsing = 0;
@@ -235,6 +233,7 @@ public class TileEntityIronVault extends TileEntity implements IInventory {
 			
 			if (stack != null)
 			{
+				//NBTHelper.setString();
 				NBTTagCompound item = new NBTTagCompound();
 				item.setByte("Slot", (byte)i);
 				stack.writeToNBT(item);

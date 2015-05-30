@@ -1,10 +1,9 @@
-package net.tubers.vaults.blocks;
+package net.tubers.vaults.blocks.vault.iron;
 
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -15,23 +14,26 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import net.tubers.vaults.creativetab.TubersVaultsTab;
+import net.tubers.vaults.blocks.BlockContainerTV;
+import net.tubers.vaults.blocks.BlocksRef;
 import net.tubers.vaults.TubersVaults;
+import net.tubers.vaults.blocks.TileEntityTV;
+import net.tubers.vaults.utility.LogHelper;
 
-public class BlockIronVault extends BlockContainer {
+import java.lang.reflect.Constructor;
+
+public class BlockIronVault extends BlockContainerTV {
 	
 	
 
 	public BlockIronVault() 
 	{
-		super(Material.anvil);
-		setBlockName("IronVault");
-		setHardness(1000F);
+		super(Material.anvil, TileEntityIronVault.class);
+		setBlockName(BlocksRef.IRON_VAULT_NAME);
 		setBlockBounds(0.0625F, 0F, 0.0625F, 
 					   0.9375F, 1.0F, 0.9375F);
-		setCreativeTab(TubersVaultsTab.TUBERS_VAULTS_TAB);
+		this.setHardness(1000F);
 		setStepSound(Block.soundTypeMetal);
-		
 	}
 	
 	public int damageDropped(int amount)
@@ -39,12 +41,9 @@ public class BlockIronVault extends BlockContainer {
         return amount;
     }
 
-	@Override
-	public TileEntity createNewTileEntity(World w, int i) 
-	{
 
-		return new TileEntityIronVault();
-	}
+
+
 	
 	@Override
 	public boolean isOpaqueCube()
@@ -150,7 +149,6 @@ public class BlockIronVault extends BlockContainer {
 	 {
 		 this.blockIcon = var1.registerIcon("stone");
 	 }
-	
-	 
-	
+
+
 }

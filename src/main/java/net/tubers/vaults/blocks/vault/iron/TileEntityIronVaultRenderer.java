@@ -1,4 +1,4 @@
-package net.tubers.vaults.renderer.tileentity;
+package net.tubers.vaults.blocks.vault.iron;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
@@ -6,14 +6,12 @@ import org.lwjgl.opengl.GL12;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
-import net.tubers.vaults.references.Reference;
-import net.tubers.vaults.blocks.TileEntityIronVault;
-import net.tubers.vaults.models.ModelIronVault;
+import net.tubers.vaults.references.ModRef;
 
 public class TileEntityIronVaultRenderer extends TileEntitySpecialRenderer {
 
 	
-	private static final ResourceLocation ironVaultTexture = new ResourceLocation(Reference.ID,"models/ironvault.png");
+	private static final ResourceLocation ironVaultTexture = new ResourceLocation(ModRef.ID,"models/ironvault.png");
 	private ModelIronVault model = new ModelIronVault();
 	
 	public TileEntityIronVaultRenderer()

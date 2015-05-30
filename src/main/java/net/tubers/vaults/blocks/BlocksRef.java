@@ -1,4 +1,4 @@
-package net.tubers.vaults.references;
+package net.tubers.vaults.blocks;
 
 
 public class BlocksRef {

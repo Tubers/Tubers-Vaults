@@ -1,4 +1,4 @@
-package net.tubers.vaults.interfaces;
+package net.tubers.vaults.blocks.vault.iron;
 
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;

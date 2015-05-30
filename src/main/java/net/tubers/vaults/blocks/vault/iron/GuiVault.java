@@ -1,11 +1,11 @@
-package net.tubers.vaults.interfaces;
+package net.tubers.vaults.blocks.vault.iron;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import net.tubers.vaults.references.Reference;
-import net.tubers.vaults.blocks.ContainerVault;
-import net.tubers.vaults.blocks.TileEntityIronVault;
+import net.tubers.vaults.references.ModRef;
+import net.tubers.vaults.blocks.vault.iron.ContainerVault;
+import net.tubers.vaults.blocks.vault.iron.TileEntityIronVault;
 
 import org.lwjgl.opengl.GL11;
 
@@ -17,8 +17,8 @@ public class GuiVault extends GuiContainer{
 		xSize = 176;
 		ySize = 166;
 	}
-	//ResourceLocation(Reference.ID, "textures/guis/vaultGui.png");
-	private static final ResourceLocation texture = new ResourceLocation(Reference.ID, "textures/guis/VaultGui.png");
+	//ResourceLocation(ModRef.ID, "textures/guis/vaultGui.png");
+	private static final ResourceLocation texture = new ResourceLocation(ModRef.ID, "textures/guis/VaultGui.png");
 	
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float f, int x, int y) 

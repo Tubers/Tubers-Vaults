@@ -1,4 +1,4 @@
-package net.tubers.vaults.models;
+package net.tubers.vaults.blocks.vault.iron;
 
 import java.util.ArrayList;
 
