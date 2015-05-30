@@ -6,7 +6,7 @@ import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.common.config.Configuration;
 import net.tubers.vaults.references.ConfigRef;
-import net.tubers.vaults.references.Reference;
+import net.tubers.vaults.references.ModRef;
 
 public class ConfigHandler {
 
@@ -27,7 +27,7 @@ public class ConfigHandler {
 	@SubscribeEvent
 	public void onConfigurationChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event)
 	{
-		if (event.modID.equalsIgnoreCase(Reference.ID))
+		if (event.modID.equalsIgnoreCase(ModRef.ID))
 		{
 			loadConfiguration();
 		}

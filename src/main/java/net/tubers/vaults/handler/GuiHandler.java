@@ -1,13 +1,14 @@
-package net.tubers.vaults.interfaces;
+package net.tubers.vaults.handler;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.tubers.vaults.TubersVaults;
-import net.tubers.vaults.blocks.ContainerVault;
-import net.tubers.vaults.blocks.TileEntityIronVault;
+import net.tubers.vaults.blocks.vault.iron.ContainerVault;
+import net.tubers.vaults.blocks.vault.iron.TileEntityIronVault;
 import cpw.mods.fml.common.network.IGuiHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.tubers.vaults.blocks.vault.iron.GuiVault;
 
 public class GuiHandler implements IGuiHandler{
 	
@@ -41,6 +42,7 @@ public class GuiHandler implements IGuiHandler{
 			TileEntity te = world.getTileEntity(x,y,z);
 			if(te != null && te instanceof TileEntityIronVault)
 			{
+				// GUIVault also creates a container
 				return new GuiVault(player.inventory, (TileEntityIronVault) te);
 			}
 			break;

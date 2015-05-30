@@ -1,4 +1,4 @@
-package net.tubers.vaults.client;
+package net.tubers.vaults.handler;
 
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.common.MinecraftForge;

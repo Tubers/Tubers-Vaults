@@ -1,8 +1,9 @@
-package net.tubers.vaults.proxies;
+package net.tubers.vaults.client;
 
-import net.tubers.vaults.blocks.TileEntityIronVault;
-import net.tubers.vaults.renderer.tileentity.TileEntityIronVaultRenderer;
+import net.tubers.vaults.blocks.vault.iron.TileEntityIronVault;
 import cpw.mods.fml.client.registry.ClientRegistry;
+import net.tubers.vaults.CommonProxy;
+import net.tubers.vaults.blocks.vault.iron.TileEntityIronVaultRenderer;
 
 public class ClientProxy extends CommonProxy {
 	
